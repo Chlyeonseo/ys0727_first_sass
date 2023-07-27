@@ -1,0 +1,30 @@
+@mixin clear{
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+
+}
+// 여기 설정된 변수들은 수정 가능하다!!!
+@mixin button($wid:120px,$ht:30px,$f-s:12px,$bgc:pink,$f-c:#fff){
+    display: block;
+    width: $wid;
+    height: $ht;
+    background-color: $bgc;
+    font-size: $f-s;
+    line-height: $ht;
+    font-family: "arial";
+    color: $f-c;
+    border-radius: 20px;
+    text-align: center;
+}
+@mixin fonts($f-s:14px,$l-h:1,$m-b:20px,$f-c:#555,$f-f:"arial",$f-w:bold){
+    font-size: $f-s;
+    font-family: $f-f;
+    font-weight: $f-w;
+    line-height: $l-h;
+    color: $f-c;
+    margin-bottom: $m-b;
+}
